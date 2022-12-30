@@ -1,0 +1,213 @@
+/* CSS file for the project of my website
+The main goal is to learn the basic of website making
+
+Hopefully to make soemthing that could be useful*/
+
+
+* {
+    font-family: 'Bahnschrift', sans-serif;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.link {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cookie-consent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    z-index: 2;
+}
+  
+.cookie-consent img {
+    width: 100%;
+}
+  
+.close-button {
+    width: 320px;
+    height: 48px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+  
+.blur {
+    filter: blur(5px);
+}
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    padding: 0em;
+    text-align: center;
+    height: 6%;
+}
+  
+.title {
+    margin: 0.5em;
+    width: 100%;
+    text-align: center;
+}
+  
+.settings-menu {
+    position: relative;
+}
+
+.tiny-vertical-space {
+    height: 3px;
+    width: 100%;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+.settings-dropdown {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 7%;
+    z-index: 20;
+}
+
+.dropdown-element {
+    height: 34px;
+}
+
+.light-theme-settings .dark-theme-settings {
+    cursor: pointer;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    left: 0;
+}
+  
+.theme-switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-icon {
+    position: relative;
+    float: right;
+    margin-left: 3px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25%;
+    width: 60px;
+    clear: both;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: #2196f3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-switch .theme-icon {
+    right: 2px;
+    vertical-align: middle;
+}
+
+.language-picker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    font-family: 'Noto Color Emoji';
+}
+
+.language-icon {
+    height: 32px;
+    margin: auto;
+}
+
+html, body, .page-content {
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    height: 84%;
+}
+
+.left-column,
+.right-column {
+    width: 50%;
+    padding: 16px;
+    text-align: center;
+    height: 100%;
+}
+
+.column-title {
+    position: relative;
+    top: 300px;
+    font-size: xx-large;
+    font-style: italic;
+}
