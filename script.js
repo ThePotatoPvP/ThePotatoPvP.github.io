@@ -52,22 +52,45 @@ document.body.addEventListener('click', (event) => {
 
 // Theme selector in menu
 const themeSwitch = document.querySelector('#theme-switch');
-const lightThemeIcon = document.querySelector('#sun-icon')
-const darkThemeIcon = document.querySelector('#moon-icon')
+const lightThemeIcon = document.querySelector('#sun-icon');
+const darkThemeIcon = document.querySelector('#moon-icon');
 
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+const themeCookie = getCookie("theme");
+
+if (themeCookie !== "") {
+  if (themeCookie === "dark") {
     themeSwitch.checked = true;
     document.body.classList.add('dark-theme');
     settingsLight.style.display = 'none';
     settingsDark.style.display = 'block';
     darkThemeIcon.style.display = 'block';
     lightThemeIcon.style.display = 'none';
-} else {
+    setCookie('theme', 'dark', 7);
+  } else {
     themeSwitch.checked = false;
     settingsDark.style.display = 'none';
     settingsLight.style.display = 'block';
-    lightThemeIcon.style.display = 'block';
     darkThemeIcon.style.display = 'none';
+    lightThemeIcon.style.display = 'block';
+    setCookie('theme', 'light', 7);
+  }
+} else {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    themeSwitch.checked = true;
+    document.body.classList.add('dark-theme');
+    settingsLight.style.display = 'none';
+    settingsDark.style.display = 'block';
+    darkThemeIcon.style.display = 'block';
+    lightThemeIcon.style.display = 'none';
+    setCookie('theme', 'dark', 7);
+  } else {
+    themeSwitch.checked = false;
+    settingsDark.style.display = 'none';
+    settingsLight.style.display = 'block';
+    darkThemeIcon.style.display = 'none';
+    lightThemeIcon.style.display = 'block';
+    setCookie('theme', 'light', 7);
+  }
 }
 
 themeSwitch.addEventListener('change', () => {
@@ -77,16 +100,36 @@ themeSwitch.addEventListener('change', () => {
     settingsDark.style.display = 'block';
     darkThemeIcon.style.display = 'block';
     lightThemeIcon.style.display = 'none';
+    setCookie('theme', 'dark', 7);
   } else {
     document.body.classList.remove('dark-theme');
     settingsDark.style.display = 'none';
     settingsLight.style.display = 'block';
     darkThemeIcon.style.display = 'none';
     lightThemeIcon.style.display = 'block';
+    setCookie('theme', 'light', 7);
   }
 });
 
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop().split(';').shift();
+  }
+}
 
+function setCookie(name, value, days) {
+  // Création de la date d'expiration du cookie
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  // Mise en place du cookie
+  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
 
 // Language selector
 const languageButtons = document.querySelectorAll('.language-icon');
