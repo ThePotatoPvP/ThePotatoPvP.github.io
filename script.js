@@ -1,6 +1,7 @@
 // Yolo js time
 
-// Cookie Consent
+// Cookie Consent 
+/*
 const closeButton = document.querySelector('.close-button');
 const cookieConsent = document.querySelector('.cookie-consent');
 const pageContent = document.querySelector('.page-content')
@@ -25,8 +26,8 @@ if (lastVisit) {
     pageContent.classList.add('blur')
 }
 
-localStorage.setItem('lastVisit', new Date());
-
+localStorage.setItem('lastVisit', new Date()); 
+*/
 
 
 // Settings menu on  main page
@@ -37,6 +38,8 @@ const settingsDark = document.querySelector('.dark-theme-settings')
 function openSettingsDropdown() {
   settingsDropdown.style.display = 'block';
 }
+
+
 
 settingsLight.addEventListener('click', openSettingsDropdown);
 settingsDark.addEventListener('click', openSettingsDropdown);
@@ -55,81 +58,44 @@ const themeSwitch = document.querySelector('#theme-switch');
 const lightThemeIcon = document.querySelector('#sun-icon');
 const darkThemeIcon = document.querySelector('#moon-icon');
 
-const themeCookie = getCookie("theme");
+function toggleDarkTheme() {
+  document.body.classList.add('dark-theme');
+  settingsLight.style.display = 'none';
+  settingsDark.style.display = 'block';
+  darkThemeIcon.style.display = 'block';
+  lightThemeIcon.style.display = 'none';
+}
 
-if (themeCookie !== "") {
-  if (themeCookie === "dark") {
+function toggleLightTheme() {
+  document.body.classList.remove('dark-theme');
+  settingsDark.style.display = 'none';
+  settingsLight.style.display = 'block';
+  darkThemeIcon.style.display = 'none';
+  lightThemeIcon.style.display = 'block';
+}
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     themeSwitch.checked = true;
-    document.body.classList.add('dark-theme');
-    settingsLight.style.display = 'none';
-    settingsDark.style.display = 'block';
-    darkThemeIcon.style.display = 'block';
-    lightThemeIcon.style.display = 'none';
-    setCookie('theme', 'dark', 7);
-  } else {
-    themeSwitch.checked = false;
-    settingsDark.style.display = 'none';
-    settingsLight.style.display = 'block';
-    darkThemeIcon.style.display = 'none';
-    lightThemeIcon.style.display = 'block';
-    setCookie('theme', 'light', 7);
-  }
+    toggleDarkTheme();
 } else {
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    themeSwitch.checked = true;
-    document.body.classList.add('dark-theme');
-    settingsLight.style.display = 'none';
-    settingsDark.style.display = 'block';
-    darkThemeIcon.style.display = 'block';
-    lightThemeIcon.style.display = 'none';
-    setCookie('theme', 'dark', 7);
-  } else {
     themeSwitch.checked = false;
     settingsDark.style.display = 'none';
     settingsLight.style.display = 'block';
     darkThemeIcon.style.display = 'none';
     lightThemeIcon.style.display = 'block';
-    setCookie('theme', 'light', 7);
-  }
 }
 
 themeSwitch.addEventListener('change', () => {
   if (themeSwitch.checked) {
-    document.body.classList.add('dark-theme');
-    settingsLight.style.display = 'none';
-    settingsDark.style.display = 'block';
-    darkThemeIcon.style.display = 'block';
-    lightThemeIcon.style.display = 'none';
-    setCookie('theme', 'dark', 7);
+    toggleDarkTheme();
   } else {
-    document.body.classList.remove('dark-theme');
-    settingsDark.style.display = 'none';
-    settingsLight.style.display = 'block';
-    darkThemeIcon.style.display = 'none';
-    lightThemeIcon.style.display = 'block';
-    setCookie('theme', 'light', 7);
+    toggleLightTheme();
   }
 });
 
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) {
-    return parts.pop().split(';').shift();
-  }
-}
 
-function setCookie(name, value, days) {
-  // Création de la date d'expiration du cookie
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
-    expires = "; expires=" + date.toUTCString();
-  }
-  // Mise en place du cookie
-  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
+
+
 
 // Language selector
 const languageButtons = document.querySelectorAll('.language-icon');
@@ -156,4 +122,9 @@ const rightColumn = document.querySelector('.right-column')
 rightColumn.addEventListener('click', function() {
   window.location.href = 'games.html';
 });
+
+function backHome() {
+  window.location.href = 'index.html'
+}
+
 
