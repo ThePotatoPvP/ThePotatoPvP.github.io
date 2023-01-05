@@ -30,7 +30,7 @@ localStorage.setItem('lastVisit', new Date());
 */
 
 
-// Settings menu on  main page
+// Settings menu
 const settingsDropdown = document.querySelector('.settings-dropdown');
 const settingsLight = document.querySelector('.light-theme-settings')
 const settingsDark = document.querySelector('.dark-theme-settings')
@@ -114,16 +114,16 @@ languageButtons.forEach(button => {
 const leftColumn = document.querySelector('.left-column')
 
 leftColumn.addEventListener('click', function() {
-  window.location.href = 'projects.html';
+  window.location.href = './pages/projects.html';
 });
 
 const rightColumn = document.querySelector('.right-column')
 
 rightColumn.addEventListener('click', function() {
-  window.location.href = 'games.html';
+  window.location.href = './pages/games.html';
 });
 
 function backHome() {
-  window.location.href = 'index.html'
+  window.location.href = './index.html'
 }
 
