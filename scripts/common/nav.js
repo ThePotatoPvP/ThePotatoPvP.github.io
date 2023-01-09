@@ -7,6 +7,10 @@ function backHome() {
   window.location.href = '../index.html'
 }
 
+function backProjectsHome() {
+  window.location.href = '../pages/projects.html'
+}
+
 function openSettingsDropdown() {
   settingsDropdown.style.display = 'block';
 }
