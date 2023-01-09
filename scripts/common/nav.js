@@ -15,8 +15,8 @@ settingsLight.addEventListener('click', openSettingsDropdown);
 settingsDark.addEventListener('click', openSettingsDropdown);
 
 document.body.addEventListener('click', (event) => {
-  if (!settingsDropdown.contains(event.target) 
-  && event.target !== settingsDark && event.target !== settingsLight) {
+  if (!settingsDropdown.contains(event.target)
+    && event.target !== settingsDark && event.target !== settingsLight) {
     settingsDropdown.style.display = 'none';
   }
 });
@@ -34,6 +34,7 @@ function toggleDarkTheme() {
   settingsDark.style.display = 'block';
   darkThemeIcon.style.display = 'block';
   lightThemeIcon.style.display = 'none';
+  localStorage.setItem('theme', 'dark');
 }
 
 function toggleLightTheme() {
@@ -42,17 +43,23 @@ function toggleLightTheme() {
   settingsLight.style.display = 'block';
   darkThemeIcon.style.display = 'none';
   lightThemeIcon.style.display = 'block';
+  localStorage.setItem('theme', 'light');
 }
 
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    themeSwitch.checked = true;
+if (localStorage.getItem('theme')) {
+  const theme = localStorage.getItem('theme');
+  themeSwitch.checked = theme === 'dark';
+  if (theme === 'dark') {
     toggleDarkTheme();
+  } else {
+    toggleLightTheme();
+  }
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  themeSwitch.checked = true;
+  toggleDarkTheme();
 } else {
-    themeSwitch.checked = false;
-    settingsDark.style.display = 'none';
-    settingsLight.style.display = 'block';
-    darkThemeIcon.style.display = 'none';
-    lightThemeIcon.style.display = 'block';
+  themeSwitch.checked = false;
+  toggleLightTheme();
 }
 
 themeSwitch.addEventListener('change', () => {
