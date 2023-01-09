@@ -38,11 +38,11 @@ Hopefully to make soemthing that could be useful*/
     border-radius: 4px;
     z-index: 2;
 }
-  
+
 .cookie-consent img {
     width: 100%;
 }
-  
+
 .close-button {
     width: 320px;
     height: 48px;
@@ -55,7 +55,7 @@ Hopefully to make soemthing that could be useful*/
     display: block;
     margin: 0 auto;
 }
-  
+
 .blur {
     filter: blur(5px);
 }
@@ -70,13 +70,13 @@ Hopefully to make soemthing that could be useful*/
     text-align: center;
     height: 6%;
 }
-  
+
 .title {
     margin: 0.5em;
     width: 100%;
     text-align: center;
 }
-  
+
 .settings-menu {
     position: relative;
 }
@@ -118,8 +118,8 @@ Hopefully to make soemthing that could be useful*/
     height: 32px;
     left: 0;
 }
-  
-.theme-switch input { 
+
+.theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
@@ -144,7 +144,7 @@ Hopefully to make soemthing that could be useful*/
     width: 60px;
     clear: both;
 }
-  
+
 .slider:before {
     position: absolute;
     content: "";
@@ -156,16 +156,16 @@ Hopefully to make soemthing that could be useful*/
     transition: .4s;
     border-radius: 50%;
 }
-  
-input:checked + .slider {
+
+input:checked+.slider {
     background-color: #2196f3;
 }
-  
-input:focus + .slider {
+
+input:focus+.slider {
     box-shadow: 0 0 1px #2196f3;
 }
-  
-input:checked + .slider:before {
+
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
@@ -187,7 +187,9 @@ input:checked + .slider:before {
     margin: auto;
 }
 
-html, body, .page-content {
+html,
+body,
+.page-content {
     height: 100%;
     margin: 0;
 }
@@ -210,4 +212,40 @@ html, body, .page-content {
     top: 300px;
     font-size: xx-large;
     font-style: italic;
+}
+
+.content-container {
+    padding: 5%;
+}
+
+
+pre {
+    background-color: #000000;
+    border-radius: 3px;
+    font-size: 85%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+    width: 40%;
+    height: fit-content;
+}
+
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 87.5%;
+    color: #ffffff;
+    width: 100%;
+    height: fit-content;
+}
+
+pre code {
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 100%;
+    line-height: 1.45;
+    padding: 0;
+}
+
+.python .keyword {
+    color: #adff2f;
 }
