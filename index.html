@@ -10,11 +10,11 @@
 <body>
   <div class="page-content">
     <div class="top-bar">
-      <h1 class="title">Bienvenue sur le site de moi</h1>
+      <h1 class="title" id="text1">Bienvenue sur le site de moi</h1>
       <div class="settings-menu">
         <a onclick="openSettingsDropdown()">
-          <img src="./ressources/dark_theme_settings.png" alt="Paramètres" class="dark-theme-settings">
-          <img src="./ressources/light_theme_settings.png" alt="Paramètres" class="light-theme-settings">
+          <img src="./ressources/top_bar/dark_theme_settings.png" alt="Paramètres" class="dark-theme-settings">
+          <img src="./ressources/top_bar/light_theme_settings.png" alt="Paramètres" class="light-theme-settings">
         </a>
         <div class="settings-dropdown">
           <div class="tiny-vertical-space"></div>
@@ -22,8 +22,8 @@
             <label class="theme-switch">
               <input type="checkbox" id="theme-switch">
               <span class="slider"></span>
-              <img src="./ressources/sun_incon.png" alt="Icône de thème" class="theme-icon" id="sun-icon">
-              <img src="./ressources/moon_incon.png" alt="Icône de thème" class="theme-icon" id="moon-icon">
+              <img src="./ressources/top_bar/sun_incon.png" alt="Icône de thème" class="theme-icon" id="sun-icon">
+              <img src="./ressources/top_bar/moon_incon.png" alt="Icône de thème" class="theme-icon" id="moon-icon">
             </label>
           </div>
           <div class="tiny-vertical-space"></div>
@@ -31,8 +31,8 @@
           <div class="tiny-vertical-space"></div>
           <div class="dropdown-element">
             <div class="language-picker">
-              <img src="./ressources/france.png" alt="Icône de langue" class="language-icon" id="fr-icon">
-              <img src="./ressources/isle_of_man.png" alt="Icône de langue" class="language-icon" id="en-icon">
+              <img src="./ressources/top_bar/france.png" alt="Icône de langue" class="language-icon" id="fr-icon" onclick="changeLanguage('index', 'fr')">
+              <img src="./ressources/top_bar/isle_of_man.png" alt="Icône de langue" class="language-icon" id="en-icon" onclick="changeLanguage('index', 'en')">
             </div>
           </div>
           <div class="tiny-vertical-space"></div>
@@ -47,13 +47,13 @@
     </div>
     <div class="main-content">
       <div class="left-column">
-        <div class="column-title">
-          <b>PROJETS</b>
+        <div class="column-title" id="text2">
+          PROJETS
         </div>
       </div>
       <div class="right-column">
-        <div class="column-title">
-          <b>JEUX</b>
+        <div class="column-title" id="text3">
+          JEUX
         </div>
       </div>
     </div>
@@ -70,4 +70,5 @@
 </body>
 <script src="./scripts/common/nav.js"></script>
 <script src="./scripts/pages/index.js"></script>
+<script src="./scripts/common/trans.js"></script>
 </html>
