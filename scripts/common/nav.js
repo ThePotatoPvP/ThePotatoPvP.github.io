@@ -4,11 +4,11 @@ const settingsLight = document.querySelector('.light-theme-settings')
 const settingsDark = document.querySelector('.dark-theme-settings')
 
 function backHome() {
-  window.location.href = '../index.html'
+  window.location.href = '../index'
 }
 
 function backProjectsHome() {
-  window.location.href = '../pages/projects.html'
+  window.location.href = '../pages/projects'
 }
 
 function openSettingsDropdown() {
