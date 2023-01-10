@@ -43,6 +43,11 @@ Hopefully to make soemthing that could be useful*/
     padding-right: 2%;
 }
 
+#back-button {
+    position: relative;
+    padding-left: 2%;
+}
+
 .tiny-vertical-space {
     height: 3px;
     width: 100%;
@@ -70,6 +75,10 @@ Hopefully to make soemthing that could be useful*/
 }
 
 .light-theme-settings .dark-theme-settings {
+    cursor: pointer;
+}
+
+#light-theme-arrow #dark-theme-arrow {
     cursor: pointer;
 }
 
@@ -274,12 +283,12 @@ pre code {
 .project-name {
     position: relative;
     top: 2px;
-    left: 5px;
+    left: 8px;
 }
 
 .project-flags {
     justify-content: flex-end;
-    margin-top: 2px;
+    margin-top: 1px;
     margin-left: auto;
     display: flex;
     width: fit-content;
