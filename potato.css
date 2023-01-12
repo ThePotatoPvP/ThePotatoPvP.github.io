@@ -156,6 +156,7 @@ input:checked+.slider:before {
 .language-icon {
     height: 32px;
     margin: auto;
+    cursor: pointer;
 }
 
 html,
@@ -168,6 +169,7 @@ body,
 .main-content {
     display: flex;
     height: 84%;
+    overflow: hidden;
 }
 
 .left-column,

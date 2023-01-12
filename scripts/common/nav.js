@@ -14,10 +14,10 @@ function backProjectsHome() {
 function openSettingsDropdown() {
   settingsDropdown.style.display = 'block';
 }
-
+/*
 settingsLight.addEventListener('click', openSettingsDropdown);
 settingsDark.addEventListener('click', openSettingsDropdown);
-
+*/
 document.body.addEventListener('click', (event) => {
   if (!settingsDropdown.contains(event.target)
     && event.target !== settingsDark && event.target !== settingsLight) {
@@ -40,8 +40,10 @@ function toggleDarkTheme() {
   settingsDark.style.display = 'block';
   darkThemeIcon.style.display = 'block';
   lightThemeIcon.style.display = 'none';
-  lightArrow.style.display = 'none';
-  darkArrow.style.display = 'block';
+  if (lightArrow !== null) {
+    lightArrow.style.display = 'none';
+    darkArrow.style.display = 'block';
+  }
   localStorage.setItem('theme', 'dark');
 }
 
@@ -51,8 +53,10 @@ function toggleLightTheme() {
   settingsLight.style.display = 'block';
   darkThemeIcon.style.display = 'none';
   lightThemeIcon.style.display = 'block';
-  lightArrow.style.display = 'block';
-  darkArrow.style.display = 'none';
+  if (lightArrow !== null) {
+    lightArrow.style.display = 'block';
+    darkArrow.style.display = 'none';
+  }
   localStorage.setItem('theme', 'light');
 }
 
