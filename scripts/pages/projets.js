@@ -49,9 +49,9 @@ const codeBlocks = document.querySelectorAll('code');
 codeBlocks.forEach(colorKeywords);
 
 function gotoPotabot() {
-  window.location.href = '../projects/potabot.html'
+  window.location.href = '../projects/potabot'
 }
 
 function gotoThisSite() {
-  window.location.href = '../projects/thiswebsite.html'
+  window.location.href = '../projects/thiswebsite'
 }

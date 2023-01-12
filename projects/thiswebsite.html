@@ -10,9 +10,12 @@
 <body>
     <div class="page-content">
         <div class="top-bar">
-            <a onclick="backProjectsHome()">
-                <img src="../ressources/top_bar/back_home.png" alt="Retour" class="back-home-button">
-            </a>
+            <div id="back-button">
+                <a onclick="backHome()">
+                    <img src="../ressources/top_bar/light_theme_arrow.png" alt="Retour" id="light-theme-arrow">
+                    <img src="../ressources/top_bar/dark_theme_arrow.png" alt="Retour" id="dark-theme-arrow">
+                </a>
+            </div>
             <h1 class="title">PotatoLand</h1>
             <div class="settings-menu">
                 <a onclick="openSettingsDropdown()">
