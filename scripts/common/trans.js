@@ -65,7 +65,7 @@ function changeLanguage(page, newLanguage) {
     }
 }
 
-if (localStorage.getItem(language)) {
+if (localStorage.getItem('language')) {
     const lang = localStorage.getItem('language');
     let path = window.location.pathname;
     var page = path.split("/").pop();
