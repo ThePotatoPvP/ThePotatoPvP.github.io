@@ -61,5 +61,13 @@ function changeLanguage(page, newLanguage) {
         Object.keys(trans[page]).forEach(function (key) {
             setText(page, key, newLanguage);
         });
+        localStorage.setItem('language', newLanguage);
     }
+}
+
+if (localStorage.getItem(language)) {
+    const lang = localStorage.getItem('language');
+    let path = window.location.pathname;
+    var page = path.split("/").pop();
+    changeLanguage(page, lang);
 }
