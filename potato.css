@@ -353,8 +353,7 @@ pre code {
     grid-gap: 0px;
     grid-auto-rows: 33%;
     grid-auto-columns: 33%;
-    height: 100%;
-    border: 2px solid #000;
+    height: 101%;
 }
 
 .white-square {
@@ -363,6 +362,8 @@ pre code {
 
 .hexa-side {
     width: 32%;
+    background-color: #222;
+    border-radius: 0 0.6pc 0.6pc 0;
 }
 
 .game-rules {
@@ -374,16 +375,24 @@ pre code {
     height: 30%;
 }
 
+.hexa-grid-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .hexa-theme-grid {
     display: grid;
+    grid-gap: 5px;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-columns: 33.33%;
     width: 100%;
 }
 
 .hexa-theme {
     display: block;
+    height: 2em;
     text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 0.5pc;
 }
 
 @media(max-width: 767px) {

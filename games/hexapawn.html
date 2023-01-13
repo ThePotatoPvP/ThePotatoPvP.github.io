@@ -90,15 +90,26 @@
                     </div>
                     <div class="hexa-theme-selection">
                         <h2 style="text-align: center;width: 100%;">Board theme</h2>
-                        <div class="hexa-theme-grid">
-                            <div class="hexa-theme" id="og-hexa-theme" alt="OG theme">
-                                OG
-                            </div>
-                            <div class="hexa-theme" id="clean-hexa-theme" alt="Clean theme">
-                                Clean
-                            </div>
-                            <div class="hexa-theme" id="neon-hexa-theme" alt="Neon theme">
-                                Neon
+                        <div class="hexa-grid-wrapper">
+                            <div class="hexa-theme-grid">
+                                <div class="hexa-theme" id="og-hexa-theme" alt="OG theme">
+                                    OG
+                                </div>
+                                <div class="hexa-theme" id="clean-hexa-theme" alt="Clean theme" onclick="toCleanTheme()">
+                                    Clean
+                                </div>
+                                <div class="hexa-theme" style="background-color:pink;" alt="Pink theme" onclick="toPinkTheme()">
+                                    Pink
+                                </div>
+                                <div class="hexa-theme" style="background-color:red;" alt="Red theme" onclick="toRedTheme()">
+                                    Red
+                                </div>
+                                <div class="hexa-theme" style="background-color:green;" alt="Green theme" onclick="toGreenTheme()">
+                                    Green
+                                </div>
+                                <div class="hexa-theme" style="background-color:blue;" alt="Blue theme" onclick="toBlueTheme()">
+                                    Blue
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -108,5 +119,5 @@
     </div>
 </body>
 <script src="../scripts/common/nav.js"></script>
-
+<script src="hexapawn.js"></script>
 </html>
