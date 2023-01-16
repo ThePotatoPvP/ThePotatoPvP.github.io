@@ -44,6 +44,18 @@ const trans = {
             'fr': "Hexapawn est un jeu développé comme projet scolaire, codé avec un groupe d'amis. Le jeu est codé en python et se joue à 2 sur un pc. À terme ce jeu devrais faire partie de ceux disponibles sur ce site. Il restera dans cette liste comme ce que je considère être le premier 'gros' projet sur lequel j'ai travaillé.",
             'en': "Hexapawn is a school project made with two friends. It's a two players game developped in python, but only playable in local. I aim at making this game playable on this website. It will stay in this list anyhow because I still view it as the first 'big' project I ever worked on."
         }
+    },
+    'hexapawn': {
+        'text0': {
+            'fr': 'Hexapawn',
+            'en': 'Hexapawn'
+        }
+    },
+    'games': {
+        'text0': {
+            'fr': 'Hexapawn',
+            'en': 'Hexapawn'
+        }
     }
 
 }
@@ -69,10 +81,9 @@ if (localStorage.getItem('language')) {
     const lang = localStorage.getItem('language');
     let path = window.location.pathname;
     if (path == '/'){
-        var page = 'index';
+        let page = 'index';
     } else {
-        var page = path.split("/").pop();
+        let page = path.split("/").pop();
     }
-    currentLanguage = lang;
     changeLanguage(page, lang);
 }
