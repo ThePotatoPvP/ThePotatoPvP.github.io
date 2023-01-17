@@ -47,14 +47,37 @@ const trans = {
     },
     'hexapawn': {
         'text0': {
-            'fr': 'Hexapawn',
-            'en': 'Hexapawn'
+            'fr': 'Règles',
+            'en': 'Rules'
+        },'text1': {
+            'fr': "- Vous avez trois pions<br>- Les pions avancent d'une case en ligne droite<br>- Les pions mangent en diagonale",
+            'en': '- You have 3 paws on a 3 by 3 square<br>- You can move your pawns only forward<br>- You can eat ennemy pawns in diagonal'
+        },
+        'text2': {
+            'fr': 'Comment gagner',
+            'en': 'How to win'
+        },
+        'text3': {
+            'fr': "- Avoir un pion au bout du plateau<br>- Manger tous les pions ennemis<br>- Faire en sorte que l'ennemi n'aie pas de coup valide",
+            'en': '- Get 1 of your pawns to the other side<br>- Eat all ennemy pawns<br>- Block the ennemy from playing another move'
+        },
+        'text4': {
+            'fr': 'Comment jouer',
+            'en': 'How to play'
+        },
+        'text5': {
+            'fr': '- Cliquer sur le pion à bouger<br>- Puis sur la case où il doit aller',
+            'en': '- First click on the pawn you want to move<br>- Then on the spot you want it to go to'
+        },
+        'text6': {
+            'fr': 'Couleur du plateau',
+            'en': 'Board theme'
         }
     },
     'games': {
         'text0': {
-            'fr': 'Hexapawn',
-            'en': 'Hexapawn'
+            'fr': 'Jeux',
+            'en': 'Games'
         }
     }
 
@@ -80,10 +103,11 @@ function changeLanguage(page, newLanguage) {
 if (localStorage.getItem('language')) {
     const lang = localStorage.getItem('language');
     let path = window.location.pathname;
+    let page;
     if (path == '/'){
-        let page = 'index';
+        page = 'index';
     } else {
-        let page = path.split("/").pop();
+        page = path.split("/").pop();
     }
     changeLanguage(page, lang);
 }
