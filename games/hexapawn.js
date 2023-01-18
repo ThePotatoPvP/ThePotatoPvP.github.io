@@ -13,14 +13,16 @@ function estAuBout(board) {
 
 
 function allMoves(board, x, y) {
-    let side = board[x][y];
-    let 
-    if (side == 0){
-        return 0;
-    } else if (side == 1) {
-
+    let piece = board[x][y];
+    let moves = [];
+    if (piece == 0){
+        return moves;
+    } else if (piece == 1) {
+        if (board[x+1][y] == 0){
+            moves.push((x+1,y));
+        }
     }
-
+        return moves;
 }
 
 
