@@ -6,34 +6,6 @@
     <title>My Website</title>
     <meta http-equiv="cache-control" content="max-age=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" 
-        onload="renderMathInElement(document.body);"></script>
-    
-    <script>
-        // Generate a random number between 0 and 1 and append it to the URL
-        const randomVersion = Math.random().toString(36).substring(2);
-        const links = document.getElementsByTagName("link");
-        for (let i = 0; i < links.length; i++) {
-            const link = links[i];
-            if (link.href.includes("katex.min.css")) {
-                link.href = link.href.replace("version=1.0", "version=" + randomVersion);
-            }
-        }
-        const scripts = document.getElementsByTagName("script");
-        for (let i = 0; i < scripts.length; i++) {
-            const script = scripts[i];
-            if (script.src.includes("katex.min.js")) {
-                script.src = script.src.replace("version=1.0", "version=" + randomVersion);
-            } else if (script.src.includes("auto-render.min.js")) {
-                script.src = script.src.replace("version=1.0", "version=" + randomVersion);
-                script.onload = function() {
-                    renderMathInElement(document.body);
-                };
-            }
-        }
-    </script>    
 </head>
 
 <body>
