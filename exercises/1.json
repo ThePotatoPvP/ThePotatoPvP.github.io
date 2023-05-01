@@ -1,0 +1,5 @@
+{
+    "problem" : "Soit \\(n\\) un entier naturel, expliciter un polynôme \\(P_n\\in\\mathbb{R}\\left[X\\right]\\) tel que pour tout \\(\\theta\\in\\mathbb{R}\\) : \\[\\sin\\left(\\left(2n+1\\right)\\theta\\right)=\\sin\\left(\\theta\\right)P_n\\left(\\sin^2\\left(\\theta\\right)\\right)\\]",
+    "hint" : "En considérant \\(e^{i\\theta}\\) développer \\(\\left(\\cos\\left(\\theta\\right)+i\\sin\\left(\\theta\\right)\\right)^{2n+1}\\) et comparer le résultat obtenu à celui souhaité.",
+    "solution" : "Not written yet"
+}

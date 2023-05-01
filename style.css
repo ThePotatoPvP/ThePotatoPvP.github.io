@@ -1,0 +1,97 @@
+body {
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: #333  !important;
+  color: #fff;
+}
+
+.my-button {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+
+#left-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+@media screen and (orientation: portrait) {
+  .my-button {
+    font-size: 1.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
+  .generic-button {
+    font-size: 1.5rem;
+    height: 3rem;
+    margin-top: .75rem;
+  }
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+  .my-button {
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .generic-button {
+    font-size: 1rem;
+    height: 2rem;
+    margin-top: .5rem;
+  }
+}
+
+.dark-mode .my-button {
+  background-color: #eee;
+}
+
+.my-button:hover {
+  background-color: #ccc;
+}
+
+#main-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.bordered {
+  border: 2px solid #ccc;
+  border-radius: 1pc;
+  margin-bottom: 2em;
+  padding: 2em;
+}
+
+.buttons {
+  width: fit-content;
+  margin: auto;
+}
+
+.generic-button {
+  padding-left: 1em;
+  padding-right: 1em;
+  height : 2rem;
+  border-radius: 1pc;
+}

@@ -1,0 +1,5 @@
+{
+    "problem" : "Déterminer : \\[\\lim_{x\\to+\\infty}4x-\\left(\\ln\\left(x\\right)\\right)^2\\]",
+    "hint" : "On pourra factoriser par \\(4x\\) et utiliser une croissance comparée de la variable \\(\\sqrt{x}\\)",
+    "solution" : "\\[\\lim_{x\\to\\infty} 4x\\left(1-\\left(\\frac{ln(\\sqrt{x})}{\\sqrt{x}}\\right)^2\\right)=+\\infty\\]"
+}
