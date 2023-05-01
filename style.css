@@ -6,6 +6,7 @@ body {
 body.dark-mode {
   background-color: #333  !important;
   color: #fff;
+  height: 100%;
 }
 
 footer {
