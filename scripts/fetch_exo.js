@@ -14,7 +14,7 @@ if (!urlParams.has('id')) {
             return response.json();
         })
         .then(data => {
-            const problem = data.problem;
+            const problem = data.problem.toString();
             const hint = data.hint;
             const solution = data.solution;
             document.getElementById('problem').innerHTML = problem;
