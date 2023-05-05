@@ -1,4 +1,5 @@
 [
     {"1": ["ok", "med", "poly"]},
-    {"2": ["ez", "long"]}
+    {"2": ["ez", "long", "ana"]},
+    {"3": ["ez", "short", "alg_lin"]}
 ]
