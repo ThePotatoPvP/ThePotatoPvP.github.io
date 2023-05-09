@@ -9,7 +9,14 @@
     <button class="my-button" id="dark-toggle" onclick="toggleDarkMode()"></button>
     <h1><center>Bievenue sur le site de moi</center></h1>
     <div id="main-content">
-        <p>Future barre de recherche</p>
+        <div class="topnav">
+            <p id="stext">Rechercher un exercice : </p>
+            <input id="sbar" type="text" placeholder=" Id">
+            <button id="sbutton" type="submit" onclick="processQuery()">Aller</button>
+        </div>
+        <div>
+            <div id="bar"></div>
+        </div>
         <div class="buttons">
             <button class="generic-button" onclick="toRandomExercise()">J'ai aucune chance</button>
         </div>

@@ -11,3 +11,8 @@ function toRandomExercise() {
       window.location.href = './exo.html?id=' + exerciseId;
   });
 }
+
+function processQuery() {
+  const id = document.getElementById('sbar').value
+  window.location.href = './exo.html?id='+id
+}
