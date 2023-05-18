@@ -1,7 +1,6 @@
 body {
   background-color: #fff;
   transition: background-color 0.5s ease;
-  white-space: pre-line;
 }
 
 body.dark-mode {
@@ -95,6 +94,7 @@ body.dark-mode {
   margin-bottom: 2em;
   padding: 2em;
   text-align: justify;
+  white-space: pre-line;
 }
 
 .buttons {
