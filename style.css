@@ -92,7 +92,8 @@ body.dark-mode {
   border: 2px solid #ccc;
   border-radius: 1pc;
   margin-bottom: 2em;
-  padding: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
   text-align: justify;
   white-space: pre-line;
 }
