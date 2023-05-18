@@ -1,0 +1,5 @@
+{
+    "problem":"Soit \\(P\\in\\mathbb{C}[X]\\) non nul vérifiant \\(P(X^2)=P(X)P(X+1)\\)\\begin{itemize}\\item Soit \\(z\\) une racine de \\(P\\) montrer que  \\(z=0\\) ou \\(|z|=1\\) \\item Montrer de façon semblable que \\(z=1\\) ou \\(|z-1|=1\\)\\item Conclure que \\(z\\in\\{0,1,-j, -j^2\\}\\)\\item Montrer que les seules racines possibles sont  \\(0\\) et \\(1\\) puis que \\(P\\) peut s'écrire sous la forme \\(\\lambda X^{\\alpha}(X-1)^{\\beta}\\) avec \\(\\lambda, \\alpha, \\beta\\) des constantes qu'on ne cherchera pas à déterminer.\\end{itemize}",
+    "hint":"\\begin{itemize}\\item On pourra utiliser le fait que \\(P\\) possède un nombre fini de racine.\\item On pourra considérer \\(z-1\\).\\item On remarquera qu'on travaille sur des cercles.\\item Soit \\(z\\) racine de \\(P\\) on peut s'intéresser à \\(z^2\\).\\end{itemize}",
+    "solution":"à remplir"
+}
