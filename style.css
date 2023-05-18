@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
   transition: background-color 0.5s ease;
+  white-space: pre-line;
 }
 
 body.dark-mode {
