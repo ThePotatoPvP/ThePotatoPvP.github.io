@@ -127,6 +127,7 @@ body.dark-mode {
   border-bottom-right-radius: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  border: 0;
 }
 
 #sbar {
@@ -135,6 +136,7 @@ body.dark-mode {
   margin-top: 1em;
   margin-bottom: 1em;
   width: 4em;
+  border: 0;
 }
 
 #bar {
