@@ -1,0 +1,5 @@
+{
+    "proiblem": "Sur l'espace vectoriel \\(\\mathbb{R}[X]\\) on considère \\(\\delta : P \\mapsto P'\\) et \\(\\varphi  = id + \\delta\\)\n - Montrer que \\(\\varphi_{| \\mathbb{R}_n[X]}\\) est un automorphisme \n - Déterminer \\(\\varphi^{-1}\\)",
+    "hint": "- Soit \\(P\\in\\mathbb{R}[X]\\) on pourra s'interesser au degré de \\(\\varphi(P)\\). \n - Il serait interessant de poser \\(\\psi_n = id - \\delta + ... + (-1)^n\\delta^n\\).",
+    "solution": "- On commence par remarquer que le degré de \\(\\varphi(P)\\) est le degré de \\(P\\) ainsi \\(\\varphi(P)=0\\Rightarrow P=0\\) on a ainsi que \\(\\varphi\\) est un endomorphisme injectif donc d'après le théorème du rang \\(\\varphi\\) est surjectif et est donc un automorphisme de \\(\\mathbb{R}_n[X]\\). \n - Soit \\(P\\in\\mathbb{R}_n[X]\\) alors pour \\(k>n\\) on a \\(\\delta^k(P)=0\\) d'autre part on pose \\(\\psi_n = id - \\delta + ... + (-1)^n\\delta^n\\) on a alors \\(\\varphi \\circ \\psi_n = (-1)^n\\delta^{n+1}\\) après calcul. On en déduit finalement \\[\\varphi^{-1} = \\sum_{i\\geq 0} (-1)^i\\delta^i\\]"
+}
