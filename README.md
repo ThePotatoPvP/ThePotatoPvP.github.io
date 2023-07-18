@@ -5,4 +5,4 @@ TODO :
  - Add tags
  - Add search by tags
  - Contact/About page
- - Add lots fo exercises
+ - Add lots of exercises
