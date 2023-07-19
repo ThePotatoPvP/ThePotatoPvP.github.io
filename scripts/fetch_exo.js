@@ -23,9 +23,9 @@ window.onload = function () {
                 document.getElementById('solution').innerHTML = solution;
                 document.getElementById('exo_id').innerHTML = id;
 
-                //renderBordered('problem');
-                //renderBordered('hint');
-                //renderBordered('soluce');
+                renderBordered('problem');
+                renderBordered('hint');
+                renderBordered('soluce');
             })
             .catch(error => {
                 console.error(`Failed to load exercise ${id}: ${error}`);
