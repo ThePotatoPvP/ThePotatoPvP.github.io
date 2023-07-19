@@ -22,6 +22,7 @@ window.onload = function () {
                 document.getElementById('hint').innerHTML = hint;
                 document.getElementById('solution').innerHTML = solution;
                 document.getElementById('exo_id').innerHTML = id;
+
                 renderBordered('problem');
                 renderBordered('hint');
                 renderBordered('soluce');
@@ -46,9 +47,9 @@ function showSoluce() {
 }
 
 function renderBordered(id) {
-    const bord = document.getElementById(id)
+    const bordered = document.getElementById(id)
     const mathElement = document.createElement('div');
-    mathElement.textContent = bord.textContent;
+    mathElement.textContent = bordered.textContent;
     bord.textContent = "";
     bord.appendChild(mathElement);
     MathJax.typesetPromise([mathElement]); // Render the equation with MathJax
