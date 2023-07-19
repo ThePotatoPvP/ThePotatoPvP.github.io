@@ -23,9 +23,9 @@ window.onload = function () {
                 document.getElementById('solution').innerHTML = solution;
                 document.getElementById('exo_id').innerHTML = id;
 
-                renderBordered('problem');
-                renderBordered('hint');
-                renderBordered('soluce');
+                //renderBordered('problem');
+                //renderBordered('hint');
+                //renderBordered('soluce');
             })
             .catch(error => {
                 console.error(`Failed to load exercise ${id}: ${error}`);
@@ -50,7 +50,7 @@ function renderBordered(id) {
     const bordered = document.getElementById(id)
     const mathElement = document.createElement('div');
     mathElement.textContent = bordered.textContent;
-    bord.textContent = "";
-    bord.appendChild(mathElement);
+    bordered.textContent = "";
+    bordered.appendChild(mathElement);
     MathJax.typesetPromise([mathElement]); // Render the equation with MathJax
 }
