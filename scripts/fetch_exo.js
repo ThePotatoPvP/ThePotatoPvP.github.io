@@ -25,7 +25,7 @@ window.onload = function () {
 
                 renderBordered('problem');
                 renderBordered('hint');
-                renderBordered('soluce');
+                renderBordered('solution');
             })
             .catch(error => {
                 console.error(`Failed to load exercise ${id}: ${error}`);
