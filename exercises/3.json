@@ -1,5 +1,5 @@
 {
-    "problem" : "Soit \\(E\\) un \\(K\\)-esace vectoriel, \\(F\\) et \\(G\\) deux sous espaces vectoriels de \\(E\\). Montrer que \\(F\\cup G\\) est un sous espace vectoriel de \\(E\\) si et seulement si \\(F\\subset G\\) ou \\(G\\subset F\\).",
+    "problem" : "Soit \\(E\\) un \\(K\\)-espace vectoriel, \\(F\\) et \\(G\\) deux sous espaces vectoriels de \\(E\\). Montrer que \\(F\\cup G\\) est un sous espace vectoriel de \\(E\\) si et seulement si \\(F\\subset G\\) ou \\(G\\subset F\\).",
     "hint" : "Pour le sens direct on pourra par exemple supposer \\(F\\not\\subset G\\) et utiliser le fait que \\(F\\cup G\\) est un espace vectoriel.",
     "solution" : "Le sens réciproque étant immédiat on se concentre sur le sens direct, supposons que \\(F\\cup G\\) est un espace vectoriel et que \\(F\\not\\subset G\\) alors on pose \\(x\\in F\\backslash G\\) et ainsi pour tout \\(y\\in G\\) comme \\(F\\cup G\\) est stable par combinaison linéaire on a \\(x+y \\in F\\) ou \\(x+y\\in G\\) le second est impossible car \\(x\\not\\in G\\) ainsi on a \\(x+y\\in F\\Rightarrow y\\in F\\) et finalement \\(G\\subset F\\) on a ainsi le résultat souhaité."
 }
