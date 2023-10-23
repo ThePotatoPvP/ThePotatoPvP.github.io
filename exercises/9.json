@@ -1,4 +1,4 @@
 {
-    "problem": "Soient \\(H\\) et \\(K\\) deux sous-groupes d'un groupe \\(\\left(G,\\star\\right)\\). Démontrer \\(H\\cup K<G\\Leftrightarrow (H\\subset K \\lor K\\subset H)\\).",
+    "problem": "Soient \\(H\\) et \\(K\\) deux sous-groupes d'un groupe \\(\\left(G,\\star\\right)\\). Démontrer \\(H\\cup K\\) est un sous groupe de G ssi \\((H\\subset K \\lor K\\subset H)\\).",
     "solution": "Supposons que \\(H \\cup K\\) est un sous groupe de \\(G\\) et que \\(H\\not\\subseteq K\\). Alors on exhibe \\(h\\in H\\backslash K\\). Alors pour tout \\(k\\in K, h\\star k\\in H \\cup K\\) par stabilité, or ces éléments ne sont pas dans \\(K\\) sans quoi \\(h\\in K\\) s'obtient de la stabilité par passage à l'inverse, ce qui donne que tous les \\(hk\\) sont dans \\(H\\) et donc \\(K\\subseteq H\\). Ce qui donne le résultat voulu avec un raisonnement par symétrie."
 }
