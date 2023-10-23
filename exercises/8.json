@@ -1,0 +1,4 @@
+{
+    "problem" : "Soit un groupe \\(\\left(G, \\times\\right)\\). Pour tous \\(g, x \\in G\\) on note \\(^gx = g\\times x\\times g^{-1}\\). Soient \\(g,x,y\\in G\\) démontrer que \\(^g(x\\times y) = (^gx)\\times(^gy)\\) et \\(^g(x^{-1})=(^gx)^{-1}\\)",
+    "solution" : "\\((^gx)\\times(^gy)=g\\times x\\times g^{-1}\\times g\\times y\\times g^{-1}=g\\times x\\times y\\times g^{-1}=^g(x\\times y)\\)\\newline\\(\\left(^gx\\right)^{-1}= \\left(g\\times x\\times g^{-1}\\right)^{-1}=g \\times (g\\times x)^{-1}=g\\times x^{-1}\\times g^{-1}=^g(x^{-1})\\)"
+}
