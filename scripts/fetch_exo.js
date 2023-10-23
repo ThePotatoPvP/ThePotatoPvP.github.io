@@ -16,16 +16,23 @@ window.onload = function () {
             })
             .then(data => {
                 const problem = data.problem.toString();
-                const hint = data.hint;
                 const solution = data.solution;
                 document.getElementById('problem').innerHTML = problem;
-                document.getElementById('hint').innerHTML = hint;
                 document.getElementById('solution').innerHTML = solution;
                 document.getElementById('exo_id').innerHTML = id;
 
                 renderBordered('problem');
-                renderBordered('hint');
                 renderBordered('solution');
+
+                if (data.hint) {
+                    const hint = data.hint
+                    renderBordered('hint');
+                } else {
+                    const hintElements = document.querySelectorAll('.-hint');
+                    hintElements.forEach(function (element) {
+                        element.style.display = 'none';
+                    });
+                }
             })
             .catch(error => {
                 console.error(`Failed to load exercise ${id}: ${error}`);
