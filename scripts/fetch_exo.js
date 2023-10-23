@@ -26,6 +26,7 @@ window.onload = function () {
 
                 if (data.hint) {
                     const hint = data.hint
+                    document.getElementById('hint').innerHTML = hint;
                     renderBordered('hint');
                 } else {
                     const hintElements = document.querySelectorAll('.-hint');
