@@ -29,7 +29,7 @@ window.onload = function () {
                     document.getElementById('hint').innerHTML = hint;
                     renderBordered('hint');
                 } else {
-                    const hintElements = document.querySelectorAll('.-hint');
+                    const hintElements = document.querySelectorAll('r-hint');
                     hintElements.forEach(function (element) {
                         element.style.display = 'none';
                     });
